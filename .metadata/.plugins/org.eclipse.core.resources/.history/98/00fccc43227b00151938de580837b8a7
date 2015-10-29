@@ -1,0 +1,5 @@
+package com.Projektledelse.service;
+
+public class CustomUserDetailsService {
+
+}

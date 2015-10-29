@@ -1,0 +1,5 @@
+package com.projektledelse.dao;
+
+public class UserDao {
+
+}

@@ -1,0 +1,147 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<title>Projektledelse</title>
+		
+		
+		<link type="text/css" rel="stylesheet" href="<c:url value='/static/css/material.css' />"/>
+    	<link type="text/css" rel="stylesheet" media="screen,projection" href="<c:url value='/static/css/materialize.css' />"/>
+    	
+    	
+    	<script src="<c:url value="/static/js/jquery-2.1.4.min.js" />"></script>
+    	<script src="<c:url value="/static/js/materialize.min.js" />"></script>
+    	<script src="<c:url value="/static/js/material.min.js" />"></script>
+    
+    	<!-- Icon font -->
+    	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    	<link href='https://fonts.googleapis.com/css?family=Roboto|Montserrat' rel='stylesheet' type='text/css'>
+    	
+    	<script type="text/javascript">
+        	$( document ).ready(function(){
+            	$(".button-collapse").sideNav();
+            	
+            	
+            	$("#getStarted").click(function(){
+                    $( "#welcomeLogin" ).show();
+                    $( "#welcomeText" ).hide();
+                    $("#background").addClass("darker");
+                    $(this).data('clicked', true);
+                });
+            	
+        	});
+    	</script>
+  
+  		
+	</head>
+
+	<body>
+	
+	<c:url var="loginUrl" value="/login" />
+    <div class="login-layout-transparent">
+      <!-- background -->
+      <div class="bg" id="background"></div>
+      
+      <!-- Navigation Menu-->
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li><a href="sass.html">Home</a></li>
+            <li><a href="badges.html">About us</a></li>
+            <li><a href="collapsible.html">Portfolio</a></li>
+            <li><a href="mobile.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+      <!-- Middle page -->
+      <div class="container">
+
+        <!-- Icon/form Section -->
+        <div class="section">
+        	
+        	<!-- Icon -->
+          	<div class="row center">
+            	<div class="col s12">
+              		<div class="valign-wrapper">
+                		<div class="intro_bg"></div>
+              		</div>
+            	</div>
+          	</div>
+          	
+          	<!-- Welcome Text -->
+          	<div class="hide-on-med-and-down" id="welcomeText">
+            	<div class="row center">
+              		<div class="col s12">
+                  		<div class="valign-wrapper">
+                    		<div class="form_welcome">
+                      			<h3 id="text_welcome" >
+                        		Spread the word about <br>
+                        		<span> Projektledelse Live! </span>
+                      			</h3>
+                    		</div>
+                  		</div>
+                	</div>
+              	</div>
+         	
+              	<div class="row center">
+                	<div class="col s12">
+                  		<a href="#" id="getStarted" class="btn-large larger waves-effect waves-light blue">Get Started</a>
+                	</div>
+              	</div>
+              	<!-- Fake Form -->
+              	<form action="${loginUrl}" method="post">
+              		<input type="hidden"  id="username" name="ssoId" placeholder="Enter Username" required>
+					<input type="hidden"  id="password" name="password" placeholder="Enter Password" required>
+					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+              	</form>
+          	</div>
+          	
+          	
+          	<!-- Login -->
+          	<div class="welcomeLogin" id="welcomeLogin">
+            	<div class="row_0 center">
+              		<form action="${loginUrl}" method="post">
+                		<div class="valign-wrapper">
+                  			<div class="form_welcome">
+                    			<div class="input-field white-text col s12">
+                      				<input type="text" id="username" name="ssoId" placeholder="Username" class="validate">
+                    			</div>
+                    			<div class="input-field white-text col s12">
+                      				<input type="password" id="password" name="password" placeholder="Password" class="validate">
+   									<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+                    			</div>
+                  			</div>
+                		</div>
+              		
+            	</div>
+
+            	<div class="row center">
+              		<div class="col s12">
+                		<button id="login" type="submit" class="btn-large larger waves-effect waves-light blue"  name="action">
+                			Login
+                		</button>
+              
+              		</div>
+            	</div>
+            	</form
+        	</div>
+        	
+	  <!-- Fim da Section -->
+      </div>
+    <!-- Fim do Container -->
+    </div>
+    
+    <!-- Fim da página  -->
+    </div>
+      
+	</body>
+</html>

@@ -1,0 +1,5 @@
+package com.projektledelse.service;
+
+public class UserService {
+
+}

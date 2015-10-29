@@ -1,0 +1,5 @@
+package com.projektledelse.controller;
+
+public class LoginController {
+
+}
