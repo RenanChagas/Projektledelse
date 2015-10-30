@@ -18,16 +18,14 @@
     	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     	<link href='https://fonts.googleapis.com/css?family=Roboto|Montserrat' rel='stylesheet' type='text/css'>
     	
+    	<!--Let browser know website is optimized for mobile-->
+      	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    	
     	<script type="text/javascript">
         	$( document ).ready(function(){
             	$(".button-collapse").sideNav();
             	
-            	if ($('#toast-container').is(':visible')) {
-            		Materialize.toast('I am a toast', 4000);
-            	}
-            	
-            	
-            	
+        	
             	if (location.search != '' ||  location.hash != '') {
             		$( "#welcomeLogin" ).show();
             		$("#background").addClass("darker");
@@ -55,26 +53,25 @@
                     $( "#welcomeLogin" ).show();
                   }
                   else {
-                    if ($('#welcomeLogin').is(':visible') && $("#getStarted").data('clicked')){
-                       $( "#welcomeText" ).hide();
-                     }
-                    else {
-                    	if (location.search != '' ||  location.hash != '') {
-                    		
-                    	}
+                    	if ($('#welcomeLogin').is(':visible') && $("#getStarted").data('clicked')){
+                       		$( "#welcomeText" ).hide();
+                     	}
                     	else {
-                    		$( "#welcomeLogin" ).hide();
-                            $("#background").removeClass("darker");
-                            $( "#welcomeText" ).show();
-                    	}  
-                   	}
-                  }
-               });
+                    		if (location.search != '' ||  location.hash != '') {
+           
+                    		}
+                    		else {
+                    			$( "#welcomeLogin" ).hide();
+                            	$("#background").removeClass("darker");
+                            	$( "#welcomeText" ).show();
+                    		}  
+                   		}
+                  	}
+                });
             	
         	});
     	</script>
-  
-  		
+ 
 	</head>
 
 	<body>
@@ -154,13 +151,12 @@
 	            	<div class="row center">
 	                		<div class="valign-wrapper">
 	                  			<div class="form_welcome">
-	                    			<div class="input-field white-text col s12">
+	                    			<div class="input-field invalid white-text col s12">
 	                    				<div class="material-icons prefix_login">account_circle</div>
 	                      				<c:choose>
 	  										<c:when test="${param.error != null}">
 	  											<input type="text" id="username" name="ssoId" placeholder="Wrong Username or Password" 
-	  											class="validate">
-	  											<div class="toast-container"></div>
+	  											class="invalid">
 	  										</c:when>
 	  										<c:otherwise>
 	   											<input type="text" id="username" name="ssoId" placeholder="Username" class="validate">
