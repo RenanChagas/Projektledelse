@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Projektledelse/src/main/webapp/static/images/picjumbo.com_HNCK5027.jpg&apos; to &apos;background-login.jpg&apos;" description="Rename resource &apos;picjumbo.com_HNCK5027.jpg&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/static/images/picjumbo.com_HNCK5027.jpg" name="background-login.jpg" stamp="1450913550109" updateReferences="true"/>
+</session>

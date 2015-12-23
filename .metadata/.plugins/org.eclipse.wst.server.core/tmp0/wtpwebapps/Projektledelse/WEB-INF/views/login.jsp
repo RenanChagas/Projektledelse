@@ -165,7 +165,16 @@
 	                    			</div>
 	                    			<div class="input-field white-text col s12">
 	                      				<i class="material-icons prefix_login">lock_outline</i>
-	   											<input type="password" id="password" name="password" placeholder="Password" class="validate">
+	                      						<c:choose>
+	  												<c:when test="${param.error != null}">
+	   													<input type="password" id="password" name="password" placeholder="Password" 
+	   													class="invalid">
+	   												</c:when>
+	  												<c:otherwise>
+	  													<input type="password" id="password" name="password" placeholder="Password" 
+	   													class="validate">
+	  												</c:otherwise>
+	  											</c:choose>
 	  									<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 	                    			</div>
 	                  			</div>

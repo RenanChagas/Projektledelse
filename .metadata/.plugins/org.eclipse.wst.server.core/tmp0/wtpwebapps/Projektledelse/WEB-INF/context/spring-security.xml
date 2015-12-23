@@ -10,7 +10,8 @@
         <intercept-url pattern="/" access="permitAll" />
         <intercept-url pattern="/home" access="hasRole('USER') or hasRole('ADMIN') or hasRole('DBA')" />
         <intercept-url pattern="/admin**" access="hasRole('ADMIN')" />
-        <intercept-url pattern="/dba**" access="hasRole('ADMIN') and hasRole('DBA')" />
+        <intercept-url pattern="/user**" access="hasRole('USER') or hasRole('ADMIN') or hasRole('DBA')" />
+        <intercept-url pattern="/dba**" access="hasRole('ADMIN') and hasRole('DBA')"/>
         <form-login  login-page="/login" 
         			 username-parameter="ssoId" 
         			 password-parameter="password" 
