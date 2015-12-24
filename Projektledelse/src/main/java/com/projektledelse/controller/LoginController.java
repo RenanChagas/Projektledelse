@@ -32,12 +32,12 @@ public class LoginController {
 	@Autowired
 	UserService userService;
 	
-	@RequestMapping(value = { "/", "/home" }, method = RequestMethod.GET)
-	public String homePage(ModelMap model) {
-		model.addAttribute("greeting", "Hi, Welcome to mysite");
-		return "welcome";
+	@RequestMapping(value = { "/user", "/user/dashboard" }, method = RequestMethod.GET)
+	public String dashboard(ModelMap model) {
+		model.addAttribute("user", getPrincipal());
+		return "user/dashboard";
 	}
-
+	
 	@RequestMapping(value = "/admin", method = RequestMethod.GET)
 	public String adminPage(ModelMap model) {
 		model.addAttribute("user", getPrincipal());

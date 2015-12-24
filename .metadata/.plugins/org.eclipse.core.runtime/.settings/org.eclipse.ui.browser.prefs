@@ -1,3 +1,3 @@
 browsers=<?xml version\="1.0" encoding\="UTF-8"?>\n<web-browsers current\="0">\n<system/>\n</web-browsers>
 eclipse.preferences.version=1
-internalWebBrowserHistory=http\://localhost\:9080/Projektledelse/login.jsp|*|http\://localhost\:9080/projektledelse/login.jsp|*|http\://localhost\:9080/projektledelse/WEB-INF/views/login.jsp|*|
+internalWebBrowserHistory=http\://localhost\:9080/projektledelse/user|*|http\://localhost\:9080/projektledelse/login\#|*|http\://localhost\:9080/projektledelse/login|*|http\://localhost\:9080/projektledelse/login?logout|*|http\://localhost\:9080/projektledelse/admin|*|http\://localhost\:9080/projektledelse/WEB-INF/views/login.jsp|*|http\://localhost\:9080/Projektledelse/login.jsp|*|http\://localhost\:9080/projektledelse/login.jsp|*|
