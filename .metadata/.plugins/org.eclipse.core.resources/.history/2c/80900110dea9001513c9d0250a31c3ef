@@ -692,7 +692,7 @@ input[type=text].red, input[type=password].red, input[type=email], input[type=ur
 .mdmc-dashboard-card-menu-margin-icon {
   margin-top: 11px;
   margin-right: 15px !important;
-  margin-left: 0px ;
+  margin-left: 15px ;
   float: right;
   text-align: right;
   color: #757575 !important;
@@ -6598,7 +6598,7 @@ small {
   height: 36px;
   line-height: 36px;
   outline: 0;
-  padding: 0 28px;
+  padding: 0 2rem;
   text-transform: uppercase;
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent; }

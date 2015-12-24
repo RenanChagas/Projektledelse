@@ -5,8 +5,8 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>Projektledelse</title>
 		
-    	<link type="text/css" rel="stylesheet" media="screen,projection" href="<c:url value='/static/css/materialize.css' />"/>
 		<link type="text/css" rel="stylesheet" href="<c:url value='/static/css/material.css' />"/>
+    	<link type="text/css" rel="stylesheet" media="screen,projection" href="<c:url value='/static/css/materialize.css' />"/>
 
 		<script src="<c:url value="/static/js/jquery-2.1.4.min.js" />"></script>
     	<script src="<c:url value="/static/js/materialize.min.js" />"></script>
@@ -52,8 +52,8 @@
 
 				<!-- Avatar - Begin -->
 				<div class="mdlc-dashboard-avatar">
-					
-					<img src="<c:url value="/static/images/Avatar_1.png" />" class="mdmc-circle-border">
+					<img src="images/Avatar_1.png" class="mdmc-circle-border">
+					<img src="<c:url value="images/Avatar_1.png" />" class="mdmc-circle-border">
 					
 						<span>Renan Chagas</span>
 
