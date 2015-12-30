@@ -1,0 +1,11 @@
+127.0.0.1 - - [24/Dec/2015:00:19:41 -0200] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [24/Dec/2015:00:20:03 -0200] "GET /projektledelse/user/ HTTP/1.1" 200 10749
+0:0:0:0:0:0:0:1 - - [24/Dec/2015:00:20:03 -0200] "GET /projektledelse/static/css/material.css HTTP/1.1" 200 304016
+0:0:0:0:0:0:0:1 - - [24/Dec/2015:00:20:03 -0200] "GET /projektledelse/static/css/materialize.css HTTP/1.1" 200 211754
+0:0:0:0:0:0:0:1 - - [24/Dec/2015:00:20:03 -0200] "GET /projektledelse/static/js/jquery-2.1.4.min.js HTTP/1.1" 200 84345
+0:0:0:0:0:0:0:1 - - [24/Dec/2015:00:20:03 -0200] "GET /projektledelse/static/js/jquery.circliful.js HTTP/1.1" 200 9013
+0:0:0:0:0:0:0:1 - - [24/Dec/2015:00:20:03 -0200] "GET /projektledelse/static/js/materialize.min.js HTTP/1.1" 200 122912
+0:0:0:0:0:0:0:1 - - [24/Dec/2015:00:20:03 -0200] "GET /projektledelse/static/js/material.min.js HTTP/1.1" 200 59396
+0:0:0:0:0:0:0:1 - - [24/Dec/2015:00:20:03 -0200] "GET /projektledelse/static/images/Avatar_1.png HTTP/1.1" 200 3750
+0:0:0:0:0:0:0:1 - - [24/Dec/2015:00:20:03 -0200] "GET /projektledelse/static/images/dashboard-logo.png HTTP/1.1" 200 11523
+0:0:0:0:0:0:0:1 - - [24/Dec/2015:00:20:03 -0200] "GET /projektledelse/static/font/roboto/Roboto-Medium.woff2 HTTP/1.1" 200 50224
