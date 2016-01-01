@@ -23,11 +23,12 @@ public class UserService{
 
 	public void save(User user){
 		
-		//if (user.getAvatarDesc() != null){
+	//	if (user.getImage().toString() != null){
 		
 			//save image into database
 			File file = new File("/Users/renanchagas/Desktop/Avatar_1.png");
 			byte[] bFile = new byte[(int) file.length()];
+			System.out.println("USER AVATAR" +user.getAvatarDesc());
 				
 			try {
 				FileInputStream fileInputStream = new FileInputStream(file);

@@ -90,6 +90,9 @@ public class LoginController {
 			System.out.println("There are errors");
 			return "newuser";
 		}
+
+		System.out.println("Image blob : "+user.getImage().toString());
+		
 		userService.save(user);
 		
 		System.out.println("First Name : "+user.getFirstName());
@@ -98,6 +101,7 @@ public class LoginController {
 		System.out.println("Password : "+user.getPassword());
 		System.out.println("Email : "+user.getEmail());
 		System.out.println("Image Description : "+user.getAvatarDesc());
+		System.out.println("Image blob : "+user.getImage().toString());
 		System.out.println("Checking UsrProfiles....");
 		if(user.getUserProfiles()!=null){
 			for(UserProfile profile : user.getUserProfiles()){

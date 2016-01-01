@@ -7,8 +7,24 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<title>User Registration Form</title>
+	<script src="<c:url value="/static/js/jquery-2.1.4.min.js" />"></script>
 	<link href="<c:url value='/static/css/bootstrap.css' />" rel="stylesheet"></link>
 	<link href="<c:url value='/static/css/app.css' />" rel="stylesheet"></link>
+	
+	<script type="text/javascript">
+		$( document ).ready(function(){
+			$('#image').change( function(event) {
+				var tmppath = URL.createObjectURL(event.target.files[0]);
+				   
+				$("#avatarDesc").html("Temporary Path(Copy it and try pasting it in browser address bar) --> <strong>["+tmppath+"]</strong>");
+			
+				var path = $('#image')[0].files[0].name;
+				$("#avatarDesc").val(""+path);
+			});
+        		
+        });
+    </script>
+        	
 </head>
 
 <body>
@@ -78,7 +94,22 @@
 				</div>
 			</div>
 		</div>
+		
+		<div class="row">
+			<div class="form-group col-md-12">
+				<div class="col-md-7">
+					<form:input type="file" path="image" id="image" class="form-control input-sm"/>
+					<div class="has-error">
+						<form:errors path="image" class="help-inline"/>
+					</div>
+				</div>
+			</div>
+		</div>
 
+		<form:input type="text" path="avatarDesc" id="avatarDesc" />
+		<div class="has-error">
+						<form:errors path="avatarDesc" class="help-inline"/>
+		</div>
 
 		<div class="row">
 			<div class="form-group col-md-12">

@@ -48,7 +48,7 @@ public class User {
 	private byte[] image;
 	
 	@Column(name="avatar_desc", nullable=true)
-	private String avatar_desc;
+	private String avatarDesc;
 
 	@NotEmpty
 	@Column(name="STATE", nullable=false)
@@ -133,11 +133,11 @@ public class User {
 	}
 	
 	public String getAvatarDesc() {
-		return avatar_desc;
+		return avatarDesc;
 	}
 
-	public void setAvatarDesc(String avatar_desc) {
-		this.avatar_desc = avatar_desc;
+	public void setAvatarDesc(String avatarDesc) {
+		this.avatarDesc = avatarDesc;
 	}
 
 
