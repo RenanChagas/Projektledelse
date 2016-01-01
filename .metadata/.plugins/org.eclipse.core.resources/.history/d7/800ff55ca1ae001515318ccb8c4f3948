@@ -1,0 +1,10 @@
+package com.projektledelse.util;
+
+import com.projektledelse.dao.AbstractDao;
+import com.projektledelse.model.User;
+
+public class AvatarImageToByte extends AbstractDao<Integer, User> {
+	
+	
+
+}

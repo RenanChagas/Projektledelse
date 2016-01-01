@@ -1,0 +1,17 @@
+package com.projektledelse.util;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.projektledelse.service.AvatarToByteService;
+
+public class ImageToByteUtil {
+	
+	@Autowired
+	AvatarToByteService AvatarToByteService;
+	
+	public static void main(String args[]){
+		
+		
+	}
+
+}

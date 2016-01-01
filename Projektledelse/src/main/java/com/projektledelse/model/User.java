@@ -43,6 +43,12 @@ public class User {
 	@NotEmpty
 	@Column(name="EMAIL", nullable=false)
 	private String email;
+	
+	@Column(name="avatar_image", nullable=true)
+	private byte[] image;
+	
+	@Column(name="avatar_desc", nullable=true)
+	private String avatar_desc;
 
 	@NotEmpty
 	@Column(name="STATE", nullable=false)
@@ -117,6 +123,23 @@ public class User {
 	public void setUserProfiles(Set<UserProfile> userProfiles) {
 		this.userProfiles = userProfiles;
 	}
+	
+	public byte[] getImage() {
+		return this.image;
+	}
+
+	public void setImage(byte[] image) {
+		this.image = image;
+	}
+	
+	public String getAvatarDesc() {
+		return avatar_desc;
+	}
+
+	public void setAvatarDesc(String avatar_desc) {
+		this.avatar_desc = avatar_desc;
+	}
+
 
 	@Override
 	public String toString() {

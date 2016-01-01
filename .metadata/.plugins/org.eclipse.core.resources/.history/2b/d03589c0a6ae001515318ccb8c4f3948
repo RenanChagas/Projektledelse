@@ -1,0 +1,16 @@
+package com.projektledelse.util;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.projektledelse.service.AvatarToByteService;
+
+public class ImageToByteUtil {
+	
+	public static void main(String args[]){
+		
+		AvatarToByteService service = new AvatarToByteService();
+		service.saveImage("renan");
+		
+	}
+
+}

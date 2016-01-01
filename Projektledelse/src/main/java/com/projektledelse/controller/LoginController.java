@@ -97,6 +97,7 @@ public class LoginController {
 		System.out.println("SSO ID : "+user.getSsoId());
 		System.out.println("Password : "+user.getPassword());
 		System.out.println("Email : "+user.getEmail());
+		System.out.println("Image Description : "+user.getAvatarDesc());
 		System.out.println("Checking UsrProfiles....");
 		if(user.getUserProfiles()!=null){
 			for(UserProfile profile : user.getUserProfiles()){

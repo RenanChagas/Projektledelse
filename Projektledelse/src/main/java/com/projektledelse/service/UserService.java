@@ -1,5 +1,8 @@
 package com.projektledelse.service;
 
+import java.io.File;
+import java.io.FileInputStream;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -18,8 +21,26 @@ public class UserService{
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 
-	
 	public void save(User user){
+		
+		//if (user.getAvatarDesc() != null){
+		
+			//save image into database
+			File file = new File("/Users/renanchagas/Desktop/Avatar_1.png");
+			byte[] bFile = new byte[(int) file.length()];
+				
+			try {
+				FileInputStream fileInputStream = new FileInputStream(file);
+				//convert file into array of bytes
+				fileInputStream.read(bFile);
+				fileInputStream.close();
+				} 
+			catch (Exception e) {
+				e.printStackTrace();
+			}
+			user.setImage(bFile);
+	//	}
+		
 		user.setPassword(passwordEncoder.encode(user.getPassword()));
 		dao.save(user);
 	}

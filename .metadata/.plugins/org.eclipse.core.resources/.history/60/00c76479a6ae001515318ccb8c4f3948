@@ -1,0 +1,10 @@
+package com.projektledelse.util;
+
+public class ImageToByteUtil {
+	
+	public static void main(String args[]){
+		
+		
+	}
+
+}

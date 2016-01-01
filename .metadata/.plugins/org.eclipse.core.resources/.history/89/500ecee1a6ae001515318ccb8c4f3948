@@ -1,0 +1,15 @@
+package com.projektledelse.util;
+
+
+import com.projektledelse.service.AvatarToByteService;
+
+public class ImageToByteUtil {
+	
+	public static void main(String args[]){
+		
+		AvatarToByteService service = new AvatarToByteService();
+		service.saveImage("renan");
+		
+	}
+
+}

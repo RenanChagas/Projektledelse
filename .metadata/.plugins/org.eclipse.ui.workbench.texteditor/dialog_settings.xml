@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="png" key="selection"/>
+		<item value="Image" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="image"/>
+			<item value="UserDetailsService"/>
+			<item value="getByKey&apos;"/>
 			<item value="png"/>
 			<item value=".btn, .btn-large, .btn-flat"/>
 			<item value=".btn"/>
 			<item value=".btn, .btn-large"/>
 			<item value=".btn, .btn-large,"/>
-			<item value=".btn, .btn-large, "/>
-			<item value=".mdmc-dashboard-card-menu-margin-icon"/>
-			<item value="http://localhost:9080/projektledelse/user/dashboard"/>
 		</list>
 		<list key="replacehistory">
 		</list>

@@ -1,0 +1,17 @@
+package com.projektledelse.util;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.projektledelse.service.UserProfileService;
+
+public class ImageToByteUtil {
+	
+	@Autowired
+	UserProfileService userProfileService;
+	
+	public static void main(String args[]){
+		
+		
+	}
+
+}

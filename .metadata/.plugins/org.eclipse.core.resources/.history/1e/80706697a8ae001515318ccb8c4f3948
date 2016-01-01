@@ -1,0 +1,20 @@
+package com.projektledelse.util;
+
+
+import java.io.File;
+
+import com.projektledelse.service.AvatarToByteService;
+
+public class ImageToByteUtil {
+	
+	public static void main(String args[]){
+		
+		AvatarToByteService service = new AvatarToByteService();
+		
+		
+		File file = new File("/Users/renanchagas/Desktop/Avatar_1.png");
+	    byte[] bFile = new byte[(int) file.length()];
+		System.out.println("sad" + bfile);
+	}
+
+}

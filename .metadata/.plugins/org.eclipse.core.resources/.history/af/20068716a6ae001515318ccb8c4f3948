@@ -1,0 +1,47 @@
+package com.projektledelse.util;
+
+import java.io.File;
+import java.io.FileInputStream;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.projektledelse.dao.AbstractDao;
+import com.projektledelse.dao.UserDao;
+import com.projektledelse.model.User;
+
+public class AvatarImageToByte{
+	
+	@Autowired
+	private UserDao dao;
+	
+	public void saveImage(){
+	
+		
+		//save image into database
+		File file = new File("C:\\mavan-hibernate-image-mysql.png");
+	    byte[] bFile = new byte[(int) file.length()];
+	    
+	    try {
+	     FileInputStream fileInputStream = new FileInputStream(file);
+	     //convert file into array of bytes
+	     fileInputStream.read(bFile);
+	     fileInputStream.close();
+	    } catch (Exception e) {
+	     e.printStackTrace();
+	    }
+	    
+	    User avatar = new User();
+	    
+	    avatar = dao.findBySSO("renan");
+	    
+        avatar.setImage(bFile);
+        
+        save(avatar);
+        
+        //session.save(avatar);
+		
+		
+	} //Fim do método saveImage
+	
+	
+}
