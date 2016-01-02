@@ -3,6 +3,7 @@ package com.projektledelse.model;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -15,6 +16,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.NotEmpty;
+
 import com.projektledelse.model.State;
 
 @Entity
@@ -45,6 +47,7 @@ public class User {
 	private String email;
 	
 	@Column(name="avatar_image", nullable=true)
+	@Basic (fetch=FetchType.LAZY)
 	private byte[] image;
 	
 	@Column(name="avatar_desc", nullable=true)

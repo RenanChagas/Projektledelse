@@ -106,7 +106,7 @@
 			</div>
 		</div>
 
-		<form:input type="text" path="avatarDesc" id="avatarDesc" />
+		<form:input type="hidden" path="avatarDesc" id="avatarDesc" />
 		<div class="has-error">
 						<form:errors path="avatarDesc" class="help-inline"/>
 		</div>

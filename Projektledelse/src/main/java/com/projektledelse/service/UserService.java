@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 import com.projektledelse.dao.UserDao;
 import com.projektledelse.model.User;
@@ -25,13 +26,16 @@ public class UserService{
 		
 	//	if (user.getImage().toString() != null){
 		
+		//CommonsMultipartFile aFile = user.getImage();
+		
 			//save image into database
-			File file = new File("/Users/renanchagas/Desktop/Avatar_1.png");
-			byte[] bFile = new byte[(int) file.length()];
+			//File file = new File("/Users/renanchagas/Desktop/Avatar_1.png");
+			
+			byte[] bFile = new byte[(int) user.getImage().length];
 			System.out.println("USER AVATAR" +user.getAvatarDesc());
 				
 			try {
-				FileInputStream fileInputStream = new FileInputStream(file);
+				FileInputStream fileInputStream = new FileInputStream(user.getAvatarDesc());
 				//convert file into array of bytes
 				fileInputStream.read(bFile);
 				fileInputStream.close();
